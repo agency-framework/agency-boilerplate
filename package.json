@@ -27,14 +27,14 @@
   },
   "homepage": "https://github.com/StephanGerbeth/agency-boilerplate#readme",
   "devDependencies": {
-    "agency-environment": "git+https://git@github.com/StephanGerbeth/agency-environment.git#v2.0",
-    "agency-server": "git+https://git@github.com/StephanGerbeth/agency-server.git#v1.0",
     "fb": "^1.0.2",
     "htmlescape": "^1.1.0",
     "jshint": "^2.8.0",
     "minimist": "^1.2.0"
   },
   "dependencies": {
+    "agency-environment": "git+https://git@github.com/StephanGerbeth/agency-environment.git#feature/packages",
+    "agency-server": "git+https://git@github.com/StephanGerbeth/agency-server.git#v1.0",
     "ampersand-collection": "^1.6.1",
     "ampersand-model": "^6.0.3",
     "ampersand-state": "^4.9.1",

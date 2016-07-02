@@ -1,7 +1,7 @@
 "use strict";
 
-var js = require('./services/parser/js');
-require('./services/touchIndicator');
+var js = require('agency-pkg-services/parser/js')(require('./packages'));
+require('agency-pkg-services/touchIndicator');
 
 (function(){
     $(function() {
