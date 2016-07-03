@@ -33,10 +33,10 @@
     "assets": "<%= destination %>/assets/",
     "layouts": {
       "files": {
-        "src": "node_modules/agency-pkg-base/src/tmpl/partials/layouts/**/*.hbs"
+        "src": ["./src/tmpl/partials/layouts/**/*.hbs"]
       },
       "options": {
-        "base": "node_modules/agency-pkg-base/src/tmpl/partials"
+        "base": "./src/tmpl/partials"
       }
     },
     "partials": {
@@ -70,7 +70,7 @@
     },
     "subtasks": [{
       "name": "pages",
-      "layout": "layouts/default",
+      "layout": "agency-pkg-layouts/default",
       "files": {
         "src": ["./src/tmpl/**/*.hbs", "!./src/tmpl/partials/**/*.hbs"],
         "dest": "<%= destination %>"
@@ -81,7 +81,7 @@
       }
     }, {
       "name": "docs",
-      "layout": "layouts/documentation",
+      "layout": "agency-pkg-layouts/documentation",
       "files": {
         "src": ["./src/tmpl/partials/**/*.hbs", "!./src/tmpl/partials/common/**/*.hbs", "!./src/tmpl/partials/layouts/**/*.hbs"],
         "dest": "<%= destination %>",
@@ -238,9 +238,9 @@
       "name": "embed",
 
       "entry": {
-        "picture": "agency-pkg-base/polyfills/picture",
-        "animationFrame": "agency-pkg-base/polyfills/animationFrame",
-        "embed": "agency-pkg-base/embed"
+        "animationFrame": "agency-pkg-polyfills/animationFrame",
+        "picture": "agency-pkg-polyfills/picture",
+        "embed": "agency-pkg-embed"
       },
 
       "plugins": [{
@@ -249,7 +249,7 @@
         "script": "agency-environment/lib/webpack/plugins/chunk",
         "config": {
           "main": "_main.js",
-          "packages": ["picture", "animationFrame", "embed"]
+          "packages": ["polyfills", "embed"]
         }
       }, {
         "script": "agency-environment/lib/webpack/plugins/uglify",

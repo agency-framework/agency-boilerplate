@@ -1,6 +1,6 @@
 "use strict";
 
-var PositionObserver = require('../../../base/scroll/PositionObserver');
+var PositionObserver = require('agency-pkg-base/scroll/PositionObserver');
 var modernizr = require('modernizr');
 
 module.exports = PositionObserver.extend({
@@ -23,7 +23,7 @@ module.exports = PositionObserver.extend({
         PositionObserver.prototype.initialize.apply(this, arguments);
     },
 
-    onActive: function(info) {        
+    onActive: function(info) {
         this.pictureStyle.cssText = this.prefixedAttr + ': 0px ' + (info.y * 10) + 'px 10px rgba(0, 0, 0, 0.5);';
     },
 

@@ -101,7 +101,6 @@ modernizr-build can be customized by `.modernizrrc` inside the root directory of
 
 ### jshint
 
-
 ToDo:
 - [x] Check CSSNano - doesn't remove comments  
 - [x] Doc Helper
@@ -123,3 +122,16 @@ to install dev dependencies
 heroku config:set NPM_CONFIG_PRODUCTION=false
 
 test123456789
+
+## Packages
+
+Available packages:
+
+- agency-pkg-base
+- agency-pkg-common
+- agency-pkg-elements
+- agency-pkg-embed
+- agency-pkg-layouts
+- agency-pkg-polyfills
+- agency-pkg-services
+- agency-pkg-utils

@@ -5,7 +5,7 @@
   {{#each list}}
     <li>
       {{#if (isString this)}}
-        {{{mixin "elements/link" url=this title=@key}}}
+        {{{mixin "agency-pkg-elements/link" url=this title=@key}}}
       {{else}}
         <input type="checkbox" id="{{@key}}"/>
         <label for="{{@key}}">
