@@ -43,7 +43,7 @@
     "agency-pkg-polyfills": "git+https://git@github.com/StephanGerbeth/agency-pkg-polyfills.git",
     "agency-pkg-services": "git+https://git@github.com/StephanGerbeth/agency-pkg-services.git",
     "agency-pkg-utils": "git+https://git@github.com/StephanGerbeth/agency-pkg-utils.git",
-    "agency-server": "git+https://git@github.com/StephanGerbeth/agency-server.git#v1.0",
+    "agency-server": "git+https://git@github.com/StephanGerbeth/agency-server.git",
     "color": "^0.11.1",
     "fastdom": "^1.0.1",
     "fastdom-sequencer": "^1.0.3",
