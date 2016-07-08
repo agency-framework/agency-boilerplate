@@ -40,7 +40,7 @@
     "agency-environment": "git+https://git@github.com/StephanGerbeth/agency-environment.git#feature/packages",
     "agency-pkg-base": "git+https://git@github.com/StephanGerbeth/agency-pkg-base.git",
     "agency-pkg-common": "git+https://git@github.com/StephanGerbeth/agency-pkg-common.git",
-    "agency-pkg-docs": "git+https://git@github.com/StephanGerbeth/agency-pkg-docs.git",
+    "agency-pkg-docs": "git+https://git@github.com/StephanGerbeth/agency-pkg-docs.git#new-layout",
     "agency-pkg-elements": "git+https://git@github.com/StephanGerbeth/agency-pkg-elements.git",
     "agency-pkg-embed": "git+https://git@github.com/StephanGerbeth/agency-pkg-embed.git",
     "agency-pkg-layouts": "git+https://git@github.com/StephanGerbeth/agency-pkg-layouts.git",
