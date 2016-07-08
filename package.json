@@ -11,13 +11,16 @@
   },
   "license": "MIT",
   "author": "Stephan Gerbeth <stephan.gerbeth@gmail.com>",
-  "contributors": [{
-    "name": "Stephan Gerbeth",
-    "email": "stephan.gerbeth@grabarzundpartner.de"
-  }, {
-    "name": "Thorn Walli",
-    "email": "lammpee@gmail.com; thorn.walli@grabarzundpartner.de"
-  }],
+  "contributors": [
+    {
+      "name": "Stephan Gerbeth",
+      "email": "stephan.gerbeth@grabarzundpartner.de"
+    },
+    {
+      "name": "Thorn Walli",
+      "email": "lammpee@gmail.com; thorn.walli@grabarzundpartner.de"
+    }
+  ],
   "main": "none",
   "repository": {
     "type": "git",
@@ -37,6 +40,7 @@
     "agency-environment": "git+https://git@github.com/StephanGerbeth/agency-environment.git#feature/packages",
     "agency-pkg-base": "git+https://git@github.com/StephanGerbeth/agency-pkg-base.git",
     "agency-pkg-common": "git+https://git@github.com/StephanGerbeth/agency-pkg-common.git",
+    "agency-pkg-docs": "git+https://git@github.com/StephanGerbeth/agency-pkg-docs.git",
     "agency-pkg-elements": "git+https://git@github.com/StephanGerbeth/agency-pkg-elements.git",
     "agency-pkg-embed": "git+https://git@github.com/StephanGerbeth/agency-pkg-embed.git",
     "agency-pkg-layouts": "git+https://git@github.com/StephanGerbeth/agency-pkg-layouts.git",

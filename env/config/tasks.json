@@ -81,19 +81,31 @@
       }
     }, {
       "name": "docs",
-      "layout": "agency-pkg-layouts/documentation",
+      "layout": "agency-pkg-layouts/default",
       "files": {
-        "src": ["./src/tmpl/partials/**/*.hbs", "!./src/tmpl/partials/common/**/*.hbs", "!./src/tmpl/partials/layouts/**/*.hbs"],
+        "src": ["./node_modules/agency-pkg-docs/src/tmpl/*.hbs"],
         "dest": "<%= destination %>/docs/",
-        "base": "./src/tmpl/"
+        "base": "./node_modules/agency-pkg-docs/src/tmpl/"
+      },
+      "data": {
+        "cwd": "./node_modules/agency-pkg-docs/src/data/",
+        "src": ["./**/*.{json,yaml}", "!./globals/**/*.{json,yaml}"]
       }
     }, {
-      "name": "pkg-docs",
+      "name": "docs-packages",
       "layout": "agency-pkg-layouts/documentation",
       "files": {
         "src": [],
         "dest": "<%= destination %>/docs/packages",
         "base": "./node_modules/"
+      }
+    }, {
+      "name": "docs-partials",
+      "layout": "agency-pkg-layouts/documentation",
+      "files": {
+        "src": ["./src/tmpl/partials/**/*.hbs", "!./src/tmpl/partials/common/**/*.hbs", "!./src/tmpl/partials/layouts/**/*.hbs"],
+        "dest": "<%= destination %>/docs/",
+        "base": "./src/tmpl/"
       }
     }],
     "watch": [{
