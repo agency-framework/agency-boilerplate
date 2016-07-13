@@ -85,12 +85,12 @@
       "layout": "agency-pkg-layouts/default",
       "renderingOnce" : false,
       "files": {
-        "src": ["./node_modules/agency-pkg-docs/src/tmpl/docs/*.hbs"],
+        "src": ["./node_modules/agency-pkg-docs/docs/*.hbs"],
         "dest": "<%= destination %>/docs/",
-        "base": "./node_modules/agency-pkg-docs/src/tmpl/docs/"
+        "base": "./node_modules/agency-pkg-docs/docs/"
       },
       "data": {
-        "cwd": "./node_modules/agency-pkg-docs/src/data/",
+        "cwd": "./node_modules/agency-pkg-docs/docs/data/",
         "src": ["./**/*.{json,yaml}", "!./globals/**/*.{json,yaml}"]
       }
     }, {
