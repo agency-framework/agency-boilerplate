@@ -40,7 +40,7 @@
     "agency-environment": "git+https://git@github.com/StephanGerbeth/agency-environment.git#feature/flat-files",
     "agency-pkg-base": "git+https://git@github.com/StephanGerbeth/agency-pkg-base.git#feature/flat-files",
     "agency-pkg-common": "git+https://git@github.com/StephanGerbeth/agency-pkg-common.git#feature/flat-files",
-    "agency-pkg-docs": "git+https://git@github.com/StephanGerbeth/agency-pkg-docs.git#new-layout#feature/flat-files",
+    "agency-pkg-docs": "git+https://git@github.com/StephanGerbeth/agency-pkg-docs.git#feature/flat-files",
     "agency-pkg-elements": "git+https://git@github.com/StephanGerbeth/agency-pkg-elements.git#feature/flat-files",
     "agency-pkg-embed": "git+https://git@github.com/StephanGerbeth/agency-pkg-embed.git#feature/flat-files",
     "agency-pkg-layouts": "git+https://git@github.com/StephanGerbeth/agency-pkg-layouts.git#feature/flat-files",
