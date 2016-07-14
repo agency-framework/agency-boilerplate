@@ -146,7 +146,7 @@
         },
         "webpack": {
           "entry": {
-              "app": "./src/js/main"
+              "app": "./test/js/main"
           },
           "plugins": [
               {"script": "agency-environment/lib/webpack/plugins/provide", "config": {
@@ -170,7 +170,7 @@
                       "exclude": "node_modules",
                       "knownHelpers": ["block", "content"],
                       "helperDirs": [
-                        "<%= root %>/src/tmpl/partials"
+                        "<%= root %>/test/tmpl/partials"
                       ],
                       "debug": false
                   } },
