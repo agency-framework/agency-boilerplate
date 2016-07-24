@@ -34,7 +34,8 @@
     "prod": "node node_modules/gulp/bin/gulp run --serverConfig=./env/config/local.json --configTasks=./env/config/tasks.json --env=production --server=agency-server",
     "server": "node node_modules/gulp/bin/gulp default --serverConfig=./env/config/local.json --env=development --server=agency-server",
     "test": "npm run build",
-    "template": "yo agency-boilerplate:hbs-template"
+    "template": "yo agency-boilerplate:hbs-template",
+    "create-package" : "yo agency-boilerplate:package"
   },
   "dependencies": {
     "agency-environment": "git+https://git@github.com/StephanGerbeth/agency-environment.git#feature/flat-files",

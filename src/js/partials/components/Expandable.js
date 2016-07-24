@@ -3,7 +3,6 @@
 var Controller = require('agency-pkg-base/Controller');
 // var Flip = require('FLIP/dist/flip');
 var TweenMax = require('gsap');
-var TimelineMax = require('gsap/src/uncompressed/TimelineMax');
 var Viewport = require('agency-pkg-base/Viewport');
 var viewport = require('agency-pkg-services/viewport');
 
