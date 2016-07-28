@@ -71,7 +71,7 @@
     "subtasks": [{
       "name": "pages",
       "layout": "agency-pkg-layouts/default",
-      "renderingOnce" : false,
+      "renderingOnce": false,
       "files": {
         "src": ["./src/tmpl/**/*.hbs", "!./src/tmpl/partials/**/*.hbs"],
         "dest": "<%= destination %>/"
@@ -83,7 +83,7 @@
     }, {
       "name": "docs",
       "layout": "agency-pkg-layouts/default",
-      "renderingOnce" : false,
+      "renderingOnce": false,
       "files": {
         "src": ["./node_modules/agency-pkg-docs/docs/*.hbs"],
         "dest": "<%= destination %>/docs/",
@@ -96,7 +96,7 @@
     }, {
       "name": "docs-partials",
       "layout": "agency-pkg-layouts/documentation",
-      "renderingOnce" : false,
+      "renderingOnce": false,
       "files": {
         "src": ["./src/tmpl/partials/**/*.hbs", "!./src/tmpl/partials/common/**/*.hbs", "!./src/tmpl/partials/layouts/**/*.hbs"],
         "dest": "<%= destination %>/docs/",
@@ -105,7 +105,7 @@
     }, {
       "name": "docs-packages",
       "layout": "agency-pkg-layouts/documentation",
-      "renderingOnce" : true,
+      "renderingOnce": true,
       "files": {
         "src": [],
         "dest": "<%= destination %>/docs/packages",
@@ -175,32 +175,32 @@
       "default": {
         "gutterWidth": "0.9375rem",
         "wrapper": {
-          "overflow" : "hidden"
+          "overflow": "hidden"
         }
       },
       "xs": {
         "width": "30em",
         "wrapper": {
           "margin": "auto",
-          "max-width" : "30em"
+          "max-width": "30em"
         }
       },
       "sm": {
         "width": "48em",
         "wrapper": {
-          "max-width" : "48em"
+          "max-width": "48em"
         }
       },
       "md": {
         "width": "62em",
         "wrapper": {
-          "max-width" : "62em"
+          "max-width": "62em"
         }
       },
       "lg": {
         "width": "75em",
         "wrapper": {
-          "max-width" : "75em"
+          "max-width": "75em"
         }
       }
     },
@@ -338,6 +338,24 @@
       "files": {
         "src": ["<%= destination %>"],
         "dest": "<%= destination %>"
+      }
+    }]
+  },
+  "exporthbs": {
+    "subtasks": [{
+      "name": "default",
+      "files": {
+        "src": ["./src/tmpl/partials/**/*.hbs"],
+        "dest": "<%= destination %>/hbs"
+      }
+    }, {
+      "name": "packages",
+      "files": {
+        "src": [],
+        "dest": "<%= destination %>/hbs"
+      },
+      "options": {
+        "base": "./node_modules"
       }
     }]
   }

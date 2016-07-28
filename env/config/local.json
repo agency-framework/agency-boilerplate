@@ -4,6 +4,11 @@
     "root": "./build",
     "dev": false
   },
+  "export": {
+    "dest": "export",
+    "root": "./export",
+    "dev": false
+  },
   "development": {
     "host": "localhost",
     "dest": "dev",
