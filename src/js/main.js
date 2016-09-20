@@ -10,14 +10,17 @@ var Vector = require('./base/Vector');
     $(function() {
         js.parse();
 
-        var buffer = new VectorBuffer(2);
+        var buffer = new VectorBuffer(4);
 
-        buffer.add(new Vector().resetByAngle(-120));
         buffer.add(new Vector().resetByAngle(-140));
+        buffer.add(new Vector().resetByAngle(-160));
+        buffer.add(new Vector().resetByAngle(-170));
+        buffer.add(new Vector().resetByAngle(-180));
         var average1 = buffer.getAverage();
         console.log(average1.angle());
 
-        buffer.add(new Vector().resetByAngle(-160));
+        buffer.add(new Vector().resetByAngle(170));
+        buffer.add(new Vector().resetByAngle(160));
         var average2 = buffer.getAverage();
         console.log(average2.angle());
 
