@@ -95,7 +95,7 @@
       }
     }, {
       "name": "docs-partials",
-      "layout": "agency-pkg-layouts/documentation",
+      "layout": "agency-pkg-layouts/documentation/detail",
       "renderingOnce": false,
       "files": {
         "src": ["./src/tmpl/partials/**/*.hbs", "!./src/tmpl/partials/common/**/*.hbs", "!./src/tmpl/partials/layouts/**/*.hbs"],
@@ -104,7 +104,7 @@
       }
     }, {
       "name": "docs-packages",
-      "layout": "agency-pkg-layouts/documentation",
+      "layout": "agency-pkg-layouts/documentation/detail",
       "renderingOnce": true,
       "files": {
         "src": [],
