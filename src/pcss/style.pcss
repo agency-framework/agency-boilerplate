@@ -1,16 +1,14 @@
 @import "../../generated/pcss/purecss/custom-media-variables.pcss";
-
-/* package for docs css */
-@import "agency-pkg-docs";
-
-@import "agency-pkg-base";
-@import "agency-pkg-elements";
-@import "agency-pkg-services";
-@import "agency-pkg-layouts";
-
+@import "./base/mixins.pcss";
+@import "./services.pcss";
 @import "./partials.pcss";
 
 .disable-hover,
 .disable-hover * {
   pointer-events: none !important;
 }
+
+@import "agency-pkg-documentation";
+@import "agency-pkg-element-link";
+@import "agency-pkg-element-picture";
+@import "agency-pkg-element-browser-notes";

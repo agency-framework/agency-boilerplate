@@ -10,13 +10,13 @@ content:
 <article class="partial controller{{#if class}} {{{class}}}{{/if}}" data-partial="fragments/scroll-sticky-accordeon" data-controller="./partials/fragments/ScrollableStickyAccordeon" data-extended-range="false">
   <header class="sticky-element top">
     {{#block "header"}}
-      {{{mixin "agency-pkg-elements/headline/h3" headlineTop}}}
+      {{{mixin "agency-pkg-element-headline/h3" headlineTop}}}
     {{/block}}
   </header>
-  {{{mixin "agency-pkg-elements/text" content}}}
+  {{{mixin "elements/text" content}}}
   <footer class="sticky-element bottom">
     {{#block "footer"}}
-      {{{mixin "agency-pkg-elements/headline/h4" headlineBottom}}}
+      {{{mixin "agency-pkg-element-headline/h4" headlineBottom}}}
     {{/block}}
   </footer>
 </article>

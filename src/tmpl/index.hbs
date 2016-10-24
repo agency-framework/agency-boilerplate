@@ -1,13 +1,7 @@
 ---
 
 ---
-
 {{#mixin "common/content" this}}
-
-  {{#content "header"}}
-    {{{mixin "components/m1_header" globals.header}}}
-  {{/content}}
-
   {{#content "main"}}
     {{#with body}}
       {{{mixin "components/m3_stage" stage}}}
@@ -26,7 +20,7 @@
 
       {{{mixin "components/section/m4-3_headline-text"}}}
 
-      {{#mixin "agency-pkg-layouts/modal"}}
+      {{#mixin "agency-pkg-element-modal"}}
         {{#content "content"}}
           <p>
               Hello World!
@@ -38,9 +32,4 @@
 
     {{/with}}
   {{/content}}
-
-  {{#content "footer"}}
-    {{{mixin "components/m2_footer" globals.footer}}}
-  {{/content}}
-
 {{/mixin}}

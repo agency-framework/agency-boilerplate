@@ -11,16 +11,13 @@
   },
   "license": "MIT",
   "author": "Stephan Gerbeth <stephan.gerbeth@gmail.com>",
-  "contributors": [
-    {
-      "name": "Stephan Gerbeth",
-      "email": "stephan.gerbeth@grabarzundpartner.de"
-    },
-    {
-      "name": "Thorn Walli",
-      "email": "lammpee@gmail.com; thorn.walli@grabarzundpartner.de"
-    }
-  ],
+  "contributors": [{
+    "name": "Stephan Gerbeth",
+    "email": "stephan.gerbeth@grabarzundpartner.de"
+  }, {
+    "name": "Thorn Walli",
+    "email": "lammpee@gmail.com; thorn.walli@grabarzundpartner.de"
+  }],
   "main": "none",
   "repository": {
     "type": "git",
@@ -36,19 +33,24 @@
     "server": "node node_modules/gulp/bin/gulp default --serverConfig=./env/config/local.json --env=development --server=agency-server",
     "test": "npm run build",
     "template": "yo agency-boilerplate:hbs-template",
-    "create-package" : "yo agency-boilerplate:package"
+    "create-package": "yo agency-boilerplate:package"
   },
   "dependencies": {
-    "agency-environment": "git+https://git@github.com/StephanGerbeth/agency-environment.git#feature/flat-files",
-    "agency-pkg-base": "git+https://git@github.com/StephanGerbeth/agency-pkg-base.git#feature/flat-files",
-    "agency-pkg-common": "git+https://git@github.com/StephanGerbeth/agency-pkg-common.git#feature/flat-files",
-    "agency-pkg-docs": "git+https://git@github.com/StephanGerbeth/agency-pkg-docs.git#feature/flat-files",
-    "agency-pkg-elements": "git+https://git@github.com/StephanGerbeth/agency-pkg-elements.git#feature/flat-files",
-    "agency-pkg-embed": "git+https://git@github.com/StephanGerbeth/agency-pkg-embed.git#feature/flat-files",
-    "agency-pkg-layouts": "git+https://git@github.com/StephanGerbeth/agency-pkg-layouts.git#feature/flat-files",
-    "agency-pkg-polyfills": "git+https://git@github.com/StephanGerbeth/agency-pkg-polyfills.git#feature/flat-files",
-    "agency-pkg-services": "git+https://git@github.com/StephanGerbeth/agency-pkg-services.git#feature/flat-files",
-    "agency-pkg-utils": "git+https://git@github.com/StephanGerbeth/agency-pkg-utils.git#feature/flat-files",
+    "agency-environment": "../agency-environment",
+    "agency-pkg-base": "../packages/commons/agency-pkg-base",
+    "agency-pkg-documentation": "../packages/commons/agency-pkg-documentation",
+    "agency-pkg-element-headline": "../packages/elements/agency-pkg-element-headline",
+    "agency-pkg-element-link": "../packages/elements/agency-pkg-element-link",
+    "agency-pkg-element-modal": "../packages/elements/agency-pkg-element-modal",
+    "agency-pkg-element-picture": "../packages/elements/agency-pkg-element-picture",
+    "agency-pkg-element-browser-notes": "../packages/elements/agency-pkg-element-browser-notes",
+    "agency-pkg-polyfills": "../packages/commons/agency-pkg-polyfills",
+    "agency-pkg-service-animation-frame": "../packages/services/agency-pkg-service-animation-frame",
+    "agency-pkg-service-history": "../packages/services/agency-pkg-service-history",
+    "agency-pkg-service-metrics": "../packages/services/agency-pkg-service-metrics",
+    "agency-pkg-service-parser": "../packages/services/agency-pkg-service-parser",
+    "agency-pkg-service-viewport": "../packages/services/agency-pkg-service-viewport",
+    "agency-pkg-utils": "../packages/commons/agency-pkg-utils",
     "agency-server": "git+https://git@github.com/StephanGerbeth/agency-server.git",
     "color": "^0.11.1",
     "fastdom": "^1.0.1",

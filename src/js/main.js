@@ -1,7 +1,9 @@
 "use strict";
 
-var js = require('agency-pkg-services/parser/js')(require('./packages'));
-require('agency-pkg-services/touch-indicator');
+require('agency-pkg-service-animation-frame');
+require('agency-pkg-element-link/touch-indicator');
+
+var js = require('agency-pkg-service-parser')(require('./packages'));
 
 (function(){
     $(function() {

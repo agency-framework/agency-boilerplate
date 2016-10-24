@@ -7,7 +7,7 @@ var Vector = require('agency-pkg-base/Vector');
 var Bounds = require('agency-pkg-base/Bounds');
 
 var element = require('agency-pkg-utils/element');
-var viewport = require('agency-pkg-services/viewport');
+var viewport = require('agency-pkg-service-viewport');
 
 var viewportDimension = new Vector();
 var objectDimension = new Vector();

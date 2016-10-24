@@ -4,7 +4,7 @@ var Controller = require('agency-pkg-base/Controller');
 // var Flip = require('FLIP/dist/flip');
 var TweenMax = require('gsap');
 var Viewport = require('agency-pkg-base/Viewport');
-var viewport = require('agency-pkg-services/viewport');
+var viewport = require('agency-pkg-service-viewport');
 
 module.exports = Controller.extend({
 

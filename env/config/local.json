@@ -232,7 +232,7 @@
       },
       "resolve": {
         "alias": {
-          "modernizr$": "node_modules/agency-boilerplate/.modernizrrc"
+          "modernizr$": "<%= root %>/.modernizrrc"
         }
       },
       "files": {

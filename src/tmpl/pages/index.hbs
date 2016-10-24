@@ -1,46 +1,23 @@
 ---
 
 ---
-
 {{#mixin "common/content" this}}
-
-  {{#content "header"}}
-    {{{mixin "components/m1_header" globals.header}}}
-  {{/content}}
-
   {{#content "main"}}
     {{#with body}}
-      {{{mixin "components/m3_stage" stage}}}
+      {{{mixin "elements/text" textbox1}}}
 
-      {{{mixin "components/section/m4-3_headline-text" intro}}}
+      {{{mixin "agency-pkg-element-picture"}}}
 
-      {{#each teasers}}
-        {{{mixin "components/section/m4-2_teaser" this}}}
-      {{/each}}
+      {{{mixin "elements/text" textbox2}}}
 
-      {{{mixin "components/section/m4-3_headline-text" main}}}
+      {{{mixin "components/section/m4-2_teaser" parallaxContainer2}}}      
 
-      {{{mixin "components/section/m4-4_observer"}}}
+      {{{mixin "elements/text" textbox3}}}
 
-      {{{mixin "components/section/m4-5_headline-image-text"}}}
+      {{{mixin "agency-pkg-element-picture"}}}
 
-      {{{mixin "components/section/m4-3_headline-text"}}}
-
-      {{#mixin "agency-pkg-layouts/modal"}}
-        {{#content "content"}}
-          <p>
-              Hello World!
-          </p>
-        {{/content}}
-      {{/mixin}}
-
-      {{{mixin "svgs/skew-masks"}}}
+      {{{mixin "elements/text" textbox4}}}
 
     {{/with}}
   {{/content}}
-
-  {{#content "footer"}}
-    {{{mixin "components/m2_footer" globals.footer}}}
-  {{/content}}
-
 {{/mixin}}
