@@ -5,9 +5,9 @@
   "keywords": [
     "boilerplate"
   ],
-  "homepage": "https://github.com/StephanGerbeth/agency-boilerplate#readme",
+  "homepage": "https://github.com/agency-framework/agency-boilerplate#readme",
   "bugs": {
-    "url": "https://github.com/StephanGerbeth/agency-boilerplate/issues"
+    "url": "https://github.com/agency-framework/agency-boilerplate/issues"
   },
   "license": "MIT",
   "author": "Stephan Gerbeth <stephan.gerbeth@gmail.com>",
@@ -21,7 +21,7 @@
   "main": "none",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/StephanGerbeth/agency-boilerplate.git"
+    "url": "git+https://github.com/agency-framework/agency-boilerplate.git"
   },
   "scripts": {
     "heroku": "node node_modules/gulp/bin/gulp run --serverConfig=./env/config/local.json --configTasks=./env/config/tasks.json --env=production --server=agency-server",
@@ -36,22 +36,22 @@
     "create-package": "yo agency-boilerplate:package"
   },
   "dependencies": {
-    "agency-environment": "../agency-environment",
-    "agency-pkg-base": "../packages/commons/agency-pkg-base",
-    "agency-pkg-documentation": "../packages/commons/agency-pkg-documentation",
-    "agency-pkg-element-headline": "../packages/elements/agency-pkg-element-headline",
-    "agency-pkg-element-link": "../packages/elements/agency-pkg-element-link",
-    "agency-pkg-element-modal": "../packages/elements/agency-pkg-element-modal",
-    "agency-pkg-element-picture": "../packages/elements/agency-pkg-element-picture",
-    "agency-pkg-element-browser-notes": "../packages/elements/agency-pkg-element-browser-notes",
-    "agency-pkg-polyfills": "../packages/commons/agency-pkg-polyfills",
-    "agency-pkg-service-animation-frame": "../packages/services/agency-pkg-service-animation-frame",
-    "agency-pkg-service-history": "../packages/services/agency-pkg-service-history",
-    "agency-pkg-service-metrics": "../packages/services/agency-pkg-service-metrics",
-    "agency-pkg-service-parser": "../packages/services/agency-pkg-service-parser",
-    "agency-pkg-service-viewport": "../packages/services/agency-pkg-service-viewport",
-    "agency-pkg-utils": "../packages/commons/agency-pkg-utils",
-    "agency-server": "git+https://git@github.com/StephanGerbeth/agency-server.git",
+    "agency-environment": "git+https://git@github.com/agency-framework/agency-environment.git",
+    "agency-pkg-base": "git+https://git@github.com/agency-framework/agency-pkg-base.git",
+    "agency-pkg-documentation": "git+https://git@github.com/agency-framework/agency-pkg-documentation.git",
+    "agency-pkg-element-headline": "git+https://git@github.com/agency-framework/agency-pkg-element-headline.git",
+    "agency-pkg-element-link": "git+https://git@github.com/agency-framework/agency-pkg-element-link.git",
+    "agency-pkg-element-modal": "git+https://git@github.com/agency-framework/agency-pkg-element-modal.git",
+    "agency-pkg-element-picture": "git+https://git@github.com/agency-framework/agency-pkg-element-picture.git",
+    "agency-pkg-element-browser-notes": "git+https://git@github.com/agency-framework/elements/agency-pkg-element-browser-notes.git",
+    "agency-pkg-polyfills": "git+https://git@github.com/agency-framework/agency-pkg-polyfills.git",
+    "agency-pkg-service-animation-frame": "git+https://git@github.com/agency-framework/agency-pkg-service-animation-frame.git",
+    "agency-pkg-service-history": "git+https://git@github.com/agency-framework/agency-pkg-service-history.git",
+    "agency-pkg-service-metrics": "git+https://git@github.com/agency-framework/agency-pkg-service-dev-tools.git",
+    "agency-pkg-service-parser": "git+https://git@github.com/agency-framework/agency-pkg-service-parser.git",
+    "agency-pkg-service-viewport": "git+https://git@github.com/agency-framework/agency-pkg-service-viewport.git",
+    "agency-pkg-utils": "git+https://git@github.com/agency-framework/agency-pkg-utils.git",
+    "agency-server": "git+https://git@github.com/agency-framework/agency-server.git",
     "color": "^0.11.1",
     "fastdom": "^1.0.1",
     "fastdom-sequencer": "^1.0.3",
