@@ -267,6 +267,9 @@
               "<%= root %>/src/tmpl/partials"
             ],
             "debug": false
+          },
+          "agency": {
+            "customs": ["agency-environment/lib/handlebars/customs/yamlExclude"]
           }
         }, {
           "test": ".css$",
