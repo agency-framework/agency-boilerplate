@@ -44,3 +44,4 @@ node_modules_old
 /generated
 /production
 /src/js/packages*
+/src/pcss/partials*
