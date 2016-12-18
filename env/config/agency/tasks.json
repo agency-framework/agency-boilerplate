@@ -30,16 +30,17 @@
     }]
   },
   "handlebars": {
-    "registry" : {
-      "js" : "src/js/packages.js",
-      "pcss" : "src/pcss/partials.pcss",
-      "pcssExclude": ["agency-pkg-documentation", "agency-pkg-documentation/*"]
+    "registry": {
+      "js": "src/js/packages.js",
+      "pcss": "src/pcss/partials.pcss",
+      "pcssCritical": "src/pcss/partials.critical.pcss",
+      "pcssExcludes": ["agency-pkg-documentation", "agency-pkg-documentation/*"]
     },
     "helpers": [{
       "name": "doc",
       "src": "agency-environment/lib/handlebars/helpers/doc",
-      "config" : {
-        "template" :"agency-pkg-documentation/tmpl/doc-template.hbs"
+      "config": {
+        "template": "agency-pkg-documentation/tmpl/doc-template.hbs"
       }
     }],
     "assets": "<%= destination %>/assets/",
