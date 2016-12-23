@@ -56,7 +56,8 @@
     },
     "webpack": {
       "entry": {
-        "app": "./src/js/main"
+        "app": "./src/js/main",
+        "app.docs": "./src/js/main.docs"
       },
       "plugins": [{
         "script": "agency-environment/lib/webpack/plugins/provide",
@@ -188,7 +189,8 @@
     },
     "webpack": {
       "entry": {
-        "app": "./test/js/main"
+        "app": "./test/js/main",
+        "app.docs": "./test/js/main.docs"
       },
       "plugins": [{
         "script": "agency-environment/lib/webpack/plugins/provide",

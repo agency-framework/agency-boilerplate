@@ -36,9 +36,9 @@
     "create-package": "yo agency-boilerplate:package"
   },
   "dependencies": {
-    "agency-environment": "git+https://git@github.com/agency-framework/agency-environment.git#release/v3.0",
+    "agency-environment": "git+https://git@github.com/agency-framework/agency-environment.git#feature/docs-registry",
     "agency-pkg-base": "git+https://git@github.com/agency-framework/agency-pkg-base.git",
-    "agency-pkg-documentation": "git+https://git@github.com/agency-framework/agency-pkg-documentation.git",
+    "agency-pkg-documentation": "git+https://git@github.com/agency-framework/agency-pkg-documentation.git#feature/docs-registry",
     "agency-pkg-element-headline": "git+https://git@github.com/agency-framework/agency-pkg-element-headline.git",
     "agency-pkg-element-link": "git+https://git@github.com/agency-framework/agency-pkg-element-link.git",
     "agency-pkg-element-modal": "git+https://git@github.com/agency-framework/agency-pkg-element-modal.git",
