@@ -60,7 +60,6 @@
     "fastdom-sequencer": "^1.0.3",
     "gsap": "^1.18.4",
     "modernizr": "^3.0.0",
-    "umd-require-webpack-plugin": "0.0.1",
     "url": "^0.11.0"
   },
   "devDependencies": {
