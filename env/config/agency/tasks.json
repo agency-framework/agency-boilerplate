@@ -372,6 +372,12 @@
         "dest": "<%= destination %>"
       }
     }, {
+      "name": "data",
+      "files": {
+        "src": ["./src/data/**/*.{json,yaml}"],
+        "dest": "<%= destination %>/data"
+      }
+    }, {
       "name": "tmpl",
       "files": {
         "src": ["./src/tmpl/partials/**/*.hbs"],
@@ -389,7 +395,7 @@
     }, {
       "name": "assets",
       "files": {
-        "src": ["./production/assets/**/*.*"],
+        "src": ["./production/assets/**/*"],
         "dest": "<%= destination %>/assets"
       }
     }, {
@@ -403,6 +409,12 @@
       "files": {
         "src": ["./production/js/**/*.js"],
         "dest": "<%= destination %>/js"
+      }
+    }, {
+      "name": "external",
+      "files": {
+        "src": ["./production/external/**/*"],
+        "dest": "<%= destination %>/external"
       }
     }]
   }

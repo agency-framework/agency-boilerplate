@@ -12,7 +12,7 @@ picture: {}
   {{#content "attributes"}}
     data-partial="components/section/m4-2_teaser"
     data-controller="./partials/components/section/ScrollParallaxImage"
-    data-extended-range="{{{extendedRange}}}"
+    {{#if extendedRange}} data-extended-range="true"{{/if}}
   {{/content}}
   {{#content "placeholder"}}
     {{{mixin "agency-pkg-element-picture" picture}}}
