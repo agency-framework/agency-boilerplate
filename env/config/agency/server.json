@@ -187,7 +187,7 @@
     "webpack": {
       "entry": {
         "app": "./test/js/main",
-        "app.docs": "./test/js/main.docs"
+        "appDocs": "./test/js/main.docs"
       },
       "plugins": [{
         "script": "agency-environment/lib/webpack/plugins/provide",
