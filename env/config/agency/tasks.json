@@ -384,6 +384,12 @@
         "dest": "<%= destination %>/tmpl"
       }
     }, {
+      "name": "tmpl-pages",
+      "files": {
+        "src": ["./src/tmpl/**/*.hbs", "!./src/tmpl/partials/**/*.hbs"],
+        "dest": "<%= destination %>/tmpl/pages"
+      }
+    }, {
       "name": "tmpl-packages",
       "files": {
         "src": [],
@@ -395,25 +401,25 @@
     }, {
       "name": "assets",
       "files": {
-        "src": ["./production/assets/**/*"],
+        "src": ["./build/assets/**/*.*"],
         "dest": "<%= destination %>/assets"
       }
     }, {
       "name": "pcss",
       "files": {
-        "src": ["./production/css/**/*.css"],
+        "src": ["./build/css/**/*.css"],
         "dest": "<%= destination %>/css"
       }
     }, {
       "name": "js",
       "files": {
-        "src": ["./production/js/**/*.js"],
+        "src": ["./build/js/**/*.js"],
         "dest": "<%= destination %>/js"
       }
     }, {
       "name": "external",
       "files": {
-        "src": ["./production/external/**/*"],
+        "src": ["./build/external/**/*.*"],
         "dest": "<%= destination %>/external"
       }
     }]
