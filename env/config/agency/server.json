@@ -56,7 +56,8 @@
     },
     "webpack": {
       "entry": {
-        "app": "./src/js/main"
+        "app": "./src/js/main",
+        "appDocs": "./src/js/main.docs"
       },
       "plugins": [{
         "script": "agency-environment/lib/webpack/plugins/provide",
@@ -68,8 +69,6 @@
         }
       }, {
         "script": "agency-environment/lib/webpack/plugins/polyfills"
-      }, {
-        "script": "agency-environment/lib/webpack/plugins/dedupe"
       }, {
         "script": "agency-environment/lib/webpack/plugins/hotReplacement"
       }],
@@ -188,7 +187,8 @@
     },
     "webpack": {
       "entry": {
-        "app": "./test/js/main"
+        "app": "./test/js/main",
+        "app.docs": "./test/js/main.docs"
       },
       "plugins": [{
         "script": "agency-environment/lib/webpack/plugins/provide",

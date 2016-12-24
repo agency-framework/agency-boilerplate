@@ -11,13 +11,16 @@
   },
   "license": "MIT",
   "author": "Stephan Gerbeth <stephan.gerbeth@gmail.com>",
-  "contributors": [{
-    "name": "Stephan Gerbeth",
-    "email": "stephan.gerbeth@grabarzundpartner.de"
-  }, {
-    "name": "Thorn Walli",
-    "email": "lammpee@gmail.com; thorn.walli@grabarzundpartner.de"
-  }],
+  "contributors": [
+    {
+      "name": "Stephan Gerbeth",
+      "email": "stephan.gerbeth@grabarzundpartner.de"
+    },
+    {
+      "name": "Thorn Walli",
+      "email": "lammpee@gmail.com; thorn.walli@grabarzundpartner.de"
+    }
+  ],
   "main": "none",
   "repository": {
     "type": "git",
@@ -36,18 +39,18 @@
     "create-package": "yo agency-boilerplate:package"
   },
   "dependencies": {
-    "agency-environment": "git+https://git@github.com/agency-framework/agency-environment.git#release/v3.0",
+    "agency-environment": "git+https://git@github.com/agency-framework/agency-environment.git#feature/docs-registry",
     "agency-pkg-base": "git+https://git@github.com/agency-framework/agency-pkg-base.git",
-    "agency-pkg-documentation": "git+https://git@github.com/agency-framework/agency-pkg-documentation.git",
+    "agency-pkg-documentation": "git+https://git@github.com/agency-framework/agency-pkg-documentation.git#feature/docs-registry",
+    "agency-pkg-element-browser-notes": "git+https://git@github.com/agency-framework/agency-pkg-element-browser-notes.git",
     "agency-pkg-element-headline": "git+https://git@github.com/agency-framework/agency-pkg-element-headline.git",
     "agency-pkg-element-link": "git+https://git@github.com/agency-framework/agency-pkg-element-link.git",
     "agency-pkg-element-modal": "git+https://git@github.com/agency-framework/agency-pkg-element-modal.git",
     "agency-pkg-element-picture": "git+https://git@github.com/agency-framework/agency-pkg-element-picture.git",
-    "agency-pkg-element-browser-notes": "git+https://git@github.com/agency-framework/agency-pkg-element-browser-notes.git",
     "agency-pkg-polyfills": "git+https://git@github.com/agency-framework/agency-pkg-polyfills.git",
     "agency-pkg-service-animation-frame": "git+https://git@github.com/agency-framework/agency-pkg-service-animation-frame.git",
-    "agency-pkg-service-history": "git+https://git@github.com/agency-framework/agency-pkg-service-history.git",
     "agency-pkg-service-dev-tools": "git+https://git@github.com/agency-framework/agency-pkg-service-dev-tools.git",
+    "agency-pkg-service-history": "git+https://git@github.com/agency-framework/agency-pkg-service-history.git",
     "agency-pkg-service-parser": "git+https://git@github.com/agency-framework/agency-pkg-service-parser.git",
     "agency-pkg-service-viewport": "git+https://git@github.com/agency-framework/agency-pkg-service-viewport.git",
     "agency-pkg-utils": "git+https://git@github.com/agency-framework/agency-pkg-utils.git",
@@ -57,6 +60,7 @@
     "fastdom-sequencer": "^1.0.3",
     "gsap": "^1.18.4",
     "modernizr": "^3.0.0",
+    "umd-require-webpack-plugin": "0.0.1",
     "url": "^0.11.0"
   },
   "devDependencies": {
