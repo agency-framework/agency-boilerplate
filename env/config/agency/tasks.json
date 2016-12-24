@@ -315,9 +315,7 @@
         "agency_pkg_polyfills": "agency-pkg-polyfills",
         "agency_pkg_service_dev_tools": "agency-pkg-service-dev-tools"
       },
-      "plugins": [{
-        "script": "agency-environment/lib/webpack/plugins/dedupe"
-      }, {
+      "plugins": [ {
         "script": "agency-environment/lib/webpack/plugins/chunk",
         "config": {
           "main": "_main.js",
