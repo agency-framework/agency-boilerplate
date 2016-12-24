@@ -159,7 +159,6 @@
       }]
     }
   },
-
   "package-development": {
     "host": "localhost",
     "dest": "dev",
@@ -200,8 +199,6 @@
         }
       }, {
         "script": "agency-environment/lib/webpack/plugins/polyfills"
-      }, {
-        "script": "agency-environment/lib/webpack/plugins/dedupe"
       }, {
         "script": "agency-environment/lib/webpack/plugins/hotReplacement"
       }],
