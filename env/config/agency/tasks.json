@@ -76,7 +76,7 @@
     "scripts": {
       "js": {
         "main": "<%= destination %>/js/app.js",
-        "mainDocs": "<%= destination %>/js/app.docs.js",
+        "mainDocs": "<%= destination %>/js/appDocs.js",
         "embed": [
           "<%= destination %>/js/embed/_main.js",
           "<%= destination %>/js/embed/animationFrame.js",
@@ -246,7 +246,7 @@
       "hotReplacement": true,
       "entry": {
         "app": "./src/js/main",
-        "app.docs": "./src/js/main.docs"
+        "appDocs": "./src/js/main.docs"
       },
       "plugins": [{
         "script": "agency-environment/lib/webpack/plugins/provide",
