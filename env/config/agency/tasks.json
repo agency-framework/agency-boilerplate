@@ -30,16 +30,24 @@
     }]
   },
   "handlebars": {
-    "registry" : {
-      "js" : "src/js/packages.js",
-      "pcss" : "src/pcss/partials.pcss",
-      "pcssExclude": ["agency-pkg-documentation", "agency-pkg-documentation/*"]
-    },
+    "registry": [{
+      "name": "main",
+      "excludes": ["<%= destination %>/docs/"],
+      "js": "src/js/packages.js",
+      "pcss": "src/pcss/partials.pcss",
+      "pcssCritical": "src/pcss/partials.critical.pcss"
+    }, {
+      "name": "docs",
+      "includes": ["<%= destination %>/docs/"],
+      "js": "src/js/packages.docs.js",
+      "pcss": "src/pcss/partials.docs.pcss",
+      "pcssCritical": "src/pcss/partials.critical.docs.pcss"
+    }],
     "helpers": [{
       "name": "doc",
       "src": "agency-environment/lib/handlebars/helpers/doc",
-      "config" : {
-        "template" :"agency-pkg-documentation/tmpl/doc-template.hbs"
+      "config": {
+        "template": "agency-pkg-documentation/tmpl/doc-template.hbs"
       }
     }],
     "assets": "<%= destination %>/assets/",
@@ -68,6 +76,7 @@
     "scripts": {
       "js": {
         "main": "<%= destination %>/js/app.js",
+        "mainDocs": "<%= destination %>/js/appDocs.js",
         "embed": [
           "<%= destination %>/js/embed/_main.js",
           "<%= destination %>/js/embed/animationFrame.js",
@@ -76,9 +85,10 @@
         ]
       },
       "css": {
-        "docs": "css/docs.css",
         "main": "css/style.css",
-        "critical": "<%= destination %>/css/critical.css"
+        "critical": "<%= destination %>/css/critical.css",
+        "mainDocs": "css/style.docs.css",
+        "criticalDocs": "<%= destination %>/css/critical.docs.css"
       }
     },
     "subtasks": [{
@@ -171,7 +181,7 @@
         "params": []
       }],
       "files": {
-        "src": ["./src/pcss/style.pcss", "./src/pcss/critical.pcss", "./src/pcss/docs.pcss"],
+        "src": ["./src/pcss/style.pcss", "./src/pcss/critical.pcss", "./src/pcss/style.docs.pcss", "./src/pcss/critical.docs.pcss"],
         "dest": "<%= destination %>/css"
       }
     }],
@@ -235,7 +245,8 @@
       "name": "app",
       "hotReplacement": true,
       "entry": {
-        "app": "./src/js/main"
+        "app": "./src/js/main",
+        "appDocs": "./src/js/main.docs"
       },
       "plugins": [{
         "script": "agency-environment/lib/webpack/plugins/provide",
@@ -361,10 +372,22 @@
         "dest": "<%= destination %>"
       }
     }, {
+      "name": "data",
+      "files": {
+        "src": ["./src/data/**/*.{json,yaml}"],
+        "dest": "<%= destination %>/data"
+      }
+    }, {
       "name": "tmpl",
       "files": {
         "src": ["./src/tmpl/partials/**/*.hbs"],
         "dest": "<%= destination %>/tmpl"
+      }
+    }, {
+      "name": "tmpl-pages",
+      "files": {
+        "src": ["./src/tmpl/**/*.hbs", "!./src/tmpl/partials/**/*.hbs"],
+        "dest": "<%= destination %>/tmpl/pages"
       }
     }, {
       "name": "tmpl-packages",
@@ -378,20 +401,26 @@
     }, {
       "name": "assets",
       "files": {
-        "src": ["./production/assets/**/*.*"],
+        "src": ["./build/assets/**/*.*"],
         "dest": "<%= destination %>/assets"
       }
     }, {
       "name": "pcss",
       "files": {
-        "src": ["./production/css/**/*.css"],
+        "src": ["./build/css/**/*.css"],
         "dest": "<%= destination %>/css"
       }
     }, {
       "name": "js",
       "files": {
-        "src": ["./production/js/**/*.js"],
+        "src": ["./build/js/**/*.js"],
         "dest": "<%= destination %>/js"
+      }
+    }, {
+      "name": "external",
+      "files": {
+        "src": ["./build/external/**/*.*"],
+        "dest": "<%= destination %>/external"
       }
     }]
   }

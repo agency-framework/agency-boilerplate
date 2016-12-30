@@ -9,10 +9,11 @@
 @import "../../generated/pcss/purecss/custom-grid-gutter.css";
 @import "../../generated/pcss/purecss/custom-wrapper.css";
 
-img[data-preload] {
-  display: none;
-}
+/* Doc-Helper Template */
+@import "agency-pkg-documentation/doc-template.pcss";
 
-@import "./fonts.pcss";
-@import "./partials/layouts/default.pcss";
-@import "./partials.critical.pcss"
+/* Layout */
+@import "agency-pkg-documentation/layout-detail.pcss";
+@import "agency-pkg-documentation/layout-overview.pcss";
+
+@import "./partials.critical.docs.pcss";
