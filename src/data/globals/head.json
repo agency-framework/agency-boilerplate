@@ -4,8 +4,7 @@
     "favicon": "assets/favicon/favicon.ico",
     "webAppCapable": "yes",
     "statusBarStyle": "black",
-    "formatDetection": "telephone=no",
-    "author": "AUTHOR"
+    "formatDetection": "telephone=no"
   },
   "css": {
     "critical": "COMING SOON",

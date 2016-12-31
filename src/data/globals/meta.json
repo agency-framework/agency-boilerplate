@@ -1,0 +1,17 @@
+{
+  "author": "AUTHOR",
+  "keywords": "KEYWORDS",
+  "description": "DESCRIPTION",
+  "open-graph": {
+    "title": "Social Title",
+    "description": "Social Description",
+    "image": {
+      "url": "image url",
+      "secureUrl": "secure image url",
+      "type": "image/png",
+      "width": 200,
+      "height": 200
+    },
+    "locale": "de_DE"
+  }
+}

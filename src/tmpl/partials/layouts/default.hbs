@@ -31,22 +31,29 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="{{{globals.head.meta.statusBarStyle}}}">
   <meta name="format-detection" content="{{{globals.head.meta.formatDetection}}}">
 
-  <meta name="author" content="{{globals.head.meta.author}}">
-  <meta name="description" content="{{description}}">
-  <meta name="keywords" content="{{keywords}}">
-
-  {{{mixin "commons/meta/open-graph" open-graph}}}
+  {{!-- Page Meta and Opeen Graph --}}
+  <meta name="author" content="{{#if meta.author}}{{meta.author}}{{else}}{{globals.meta.author}}{{/if}}">
+  <meta name="description" content="{{#if meta.description}}{{meta.description}}{{else}}{{globals.meta.description}}{{/if}}">
+  <meta name="keywords" content="{{#if meta.keywords}}{{meta.keywords}}{{else}}{{globals.meta.keywords}}{{/if}}">
+  {{#if meta.open-graph}}
+    {{{mixin "commons/meta/open-graph" meta.open-graph}}}
+  {{else}}
+    {{{mixin "commons/meta/open-graph" globals.open-graph}}}
+  {{/if}}
 
   <title>{{title}}</title>
 
   <link rel="shortcut icon" type="image/x-icon" href="{{relativeToRoot}}{{{globals.head.meta.favicon}}}">
 
+  {{#if options.scripts.css.critical}}
   <style type="text/css">
       {{{raw options.scripts.css.critical}}}
   </style>
+  {{/if}}
 
+  {{#if globals.config.fonts}}
   <style type="text/css">
-    {{#each globals.fonts}}
+    {{#each globals.config.fonts}}
       {{#if this.base64}}
         @font-face {
           font-family: '{{name}}';
@@ -69,7 +76,7 @@
   </style>
   <script type="text/javascript">
     window.customFonts = [
-      {{#each globals.fonts}}
+      {{#each globals.config.fonts}}
         {
           name: '{{name}}',
           props: {
@@ -81,6 +88,7 @@
       {{/each}}
     ]
   </script>
+  {{/if}}
 
   {{#unless options.server.websocket}}
     <link type="text/css" rel="stylesheet" href="{{relativeToRoot}}{{options.scripts.css.main}}" media="async"/>
@@ -92,7 +100,7 @@
       {{/each}}
   </script>
 </head>
-<body>
+<body{{#if baseFilename}} data-history-base-filename="{{{baseFilename}}}"{{/if}}>
 
   {% body %}
 
