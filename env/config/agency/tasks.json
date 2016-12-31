@@ -49,6 +49,10 @@
       "config": {
         "template": "agency-pkg-documentation/tmpl/doc-template.hbs"
       }
+    }, {
+      "name": "define-area",
+      "src": "../../env/helpers/define-area",
+      "config": {}
     }],
     "assets": "<%= destination %>/assets/",
     "layouts": {
@@ -381,7 +385,7 @@
       "name": "tmpl",
       "files": {
         "src": ["./src/tmpl/partials/**/*.hbs"],
-        "dest": "<%= destination %>/tmpl"
+        "dest": "<%= destination %>/tmpl/partials"
       }
     }, {
       "name": "tmpl-pages",

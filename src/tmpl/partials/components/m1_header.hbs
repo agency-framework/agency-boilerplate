@@ -1,20 +1,12 @@
 ---
-list:
+area-list:
   -
-    url: "#1"
-    title: "Test 1"
+    partial: 'elements/navigation/item'
+    title: 'Link 1.'
   -
-    url: "#2"
-    title: "Test 2"
+    partial: 'elements/navigation/item'
+    title: 'Link 2.'
 ---
 <header class="partial controller js-slideDown critical-style" data-partial="components/m1_header" data-controller="./partials/components/Header">
-  {{#with list}}
-    <nav>
-      <ul>
-        {{#each this}}
-          <li>{{{mixin "agency-pkg-element-link" this class="hard-reset"}}}</li>
-        {{/each}}
-      </ul>
-    </nav>
-  {{/with}}
+  {{{mixin "fragments/navigation" area-list=area-list}}}
 </header>

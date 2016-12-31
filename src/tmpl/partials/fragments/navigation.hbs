@@ -1,0 +1,17 @@
+---
+area-list:
+  -
+    partial: 'elements/navigation/item'
+    title: 'Link 1.'
+  -
+    partial: 'elements/navigation/item'
+    title: 'Link 2.'
+---
+
+<nav>
+  <ul>
+    {{#define-area area-list name="navigation"}}
+      <li>{{{@element}}}</li>
+    {{/define-area}}
+  </ul>
+</nav>
