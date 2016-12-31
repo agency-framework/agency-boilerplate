@@ -5,7 +5,7 @@
     "dev": false
   },
   "export": {
-    "dest": "../agency-coma/agency-coma-backend.php/export",
+    "dest": "export",
     "root": "./export",
     "dev": false
   },
