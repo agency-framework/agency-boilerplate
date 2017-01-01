@@ -2,7 +2,7 @@
   "author": "AUTHOR",
   "keywords": "KEYWORDS",
   "description": "DESCRIPTION",
-  "open-graph": {
+  "openGraph": {
     "title": "Social Title",
     "description": "Social Description",
     "image": {

@@ -33,18 +33,32 @@ module.exports = function(data) {
                     delete ctx.partial;
                     localContext = assemble.views.partials[name].context();
                     if (localContext) {
-                        ctx = merge(data, localContext, ctx);
+                        ctx = merge({}, data, localContext, ctx);
                     }
                     ctx.relativeToRoot = options.data.root.relativeToRoot;
-                    html += fn(ctx, {
-                        data: {
-                            key: key,
-                            index: index,
-                            first: index === 0,
-                            last: maxIndex - 1 === index,
-                            element: engine.helpers.extend(name, ctx, options)
-                        }
-                    });
+                    if (fn) {
+                        /**
+                         * Inner content.
+                         * Use @elememnt for render partial.
+                          * <ul>
+                          *  {{#define-area partials}}
+                          *     <li>{{{@element}}}</li>
+                          *  {{/definea-rea}}
+                          * </ul>
+                         */
+                        html += fn(ctx, {
+                            data: {
+                                key: key,
+                                index: index,
+                                first: index === 0,
+                                last: maxIndex - 1 === index,
+                                element: engine.helpers.extend(name, ctx, options)
+                            }
+                        });
+                    } else {
+                        // {{{define-area partials}}}
+                        html += engine.helpers.extend(name, ctx, options);
+                    }
                     index++;
                 }
             }

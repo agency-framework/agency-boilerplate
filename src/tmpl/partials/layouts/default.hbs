@@ -36,9 +36,9 @@
   <meta name="description" content="{{#if meta.description}}{{meta.description}}{{else}}{{globals.meta.description}}{{/if}}">
   <meta name="keywords" content="{{#if meta.keywords}}{{meta.keywords}}{{else}}{{globals.meta.keywords}}{{/if}}">
   {{#if meta.open-graph}}
-    {{{mixin "commons/meta/open-graph" meta.open-graph}}}
+    {{{mixin "commons/meta/open-graph" meta.openGraph}}}
   {{else}}
-    {{{mixin "commons/meta/open-graph" globals.open-graph}}}
+    {{{mixin "commons/meta/open-graph" globals.openGraph}}}
   {{/if}}
 
   <title>{{title}}</title>
