@@ -35,7 +35,7 @@
   <meta name="author" content="{{#if meta.author}}{{meta.author}}{{else}}{{globals.meta.author}}{{/if}}">
   <meta name="description" content="{{#if meta.description}}{{meta.description}}{{else}}{{globals.meta.description}}{{/if}}">
   <meta name="keywords" content="{{#if meta.keywords}}{{meta.keywords}}{{else}}{{globals.meta.keywords}}{{/if}}">
-  {{#if meta.open-graph}}
+  {{#if meta.openGraph}}
     {{{mixin "commons/meta/open-graph" meta.openGraph}}}
   {{else}}
     {{{mixin "commons/meta/open-graph" globals.openGraph}}}
