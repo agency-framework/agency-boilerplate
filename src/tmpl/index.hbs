@@ -1,35 +1,41 @@
 ---
-
+area-content: # area-content
 ---
 {{#mixin "commons/content" this}}
-  {{#content "main"}}
-    {{#with body}}
-      {{{mixin "components/m3_stage" stage}}}
+    {{#content "main"}}
 
-      {{{mixin "components/section/m4-3_headline-text" intro}}}
+        {{#define-area sections name="main"}}
+            {{{@element}}}
+        {{/define-area}}
 
-      {{#each teasers}}
-        {{{mixin "components/section/m4-2_teaser" this}}}
-      {{/each}}
+        {{#with body}}
 
-      {{{mixin "components/section/m4-3_headline-text" main}}}
+            {{{mixin "components/m3_stage" stage}}}
 
-      {{{mixin "components/section/m4-4_observer"}}}
+            {{{mixin "components/section/m4-3_headline-text" intro}}}
 
-      {{{mixin "components/section/m4-5_headline-image-text"}}}
+            {{#each teasers}}
+                {{{mixin "components/section/m4-2_teaser" this}}}
+            {{/each}}
 
-      {{{mixin "components/section/m4-3_headline-text"}}}
+            {{{mixin "components/section/m4-3_headline-text" main}}}
 
-      {{#mixin "agency-pkg-element-modal"}}
-        {{#content "content"}}
-          <p>
-              Hello World!
-          </p>
-        {{/content}}
-      {{/mixin}}
+            {{{mixin "components/section/m4-4_observer"}}}
 
-      {{{mixin "svgs/skew-masks"}}}
+            {{{mixin "components/section/m4-5_headline-image-text"}}}
 
-    {{/with}}
-  {{/content}}
+            {{{mixin "components/section/m4-3_headline-text"}}}
+
+            {{#mixin "agency-pkg-element-modal"}}
+                {{#content "content"}}
+                    <p>
+                        Hello World!
+                    </p>
+                {{/content}}
+            {{/mixin}}
+
+            {{{mixin "svgs/skew-masks"}}}
+
+        {{/with}}
+    {{/content}}
 {{/mixin}}
