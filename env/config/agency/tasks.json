@@ -396,8 +396,8 @@
     }, {
       "name": "tmpl-packages",
       "files": {
-        "src": [],
-        "dest": "<%= destination %>/tmpl"
+        "src": ["!./node_modules/agency-pkg-documentation/**/*.hbs"],
+        "dest": "<%= destination %>/tmpl/pkgs"
       },
       "options": {
         "base": "./node_modules"
