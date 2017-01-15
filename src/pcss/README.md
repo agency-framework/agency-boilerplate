@@ -1,5 +1,15 @@
 # PCSS
 
+## Critical Partials
+
+Define critical partails with `data-critical-style` attribute on element.
+
+```html
+
+<div class="partial" data-critical-style="true" data-partial="...">
+
+```
+
 ## PureCSS
 
 PureCSS Task for generate custom grid.
