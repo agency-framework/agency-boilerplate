@@ -40,7 +40,7 @@ module.exports = Controller.extend({
         this.headerOutOfViewportInfo = null;
         this.footerOutOfViewportInfo = null;
 
-        if (this.model.extendedRange) {
+        if(this.model.extendedRange) {
             this.operation = 'addLocal';
         }
 
@@ -57,18 +57,18 @@ module.exports = Controller.extend({
     },
 
     onActive: function(infoFooter, infoHeader) {
-        if (infoFooter.y === 1) {
+        if(infoFooter.y === 1) {
             this.footer.classList.remove('js-scroll-sticky-bottom');
-        } else if (infoFooter.y > -1) {
+        } else if(infoFooter.y > -1) {
             this.footer.classList.remove('out-of-screen');
             this.footer.classList.add('js-scroll-sticky-bottom');
         } else {
             this.footer.classList.remove('js-scroll-sticky-bottom');
         }
 
-        if (infoHeader.y === 1) {
+        if(infoHeader.y === 1) {
             this.header.classList.remove('js-scroll-sticky-top');
-        } else if (infoHeader.y > -1) {
+        } else if(infoHeader.y > -1) {
             this.header.classList.remove('out-of-screen');
             this.header.classList.add('js-scroll-sticky-top');
 
@@ -78,11 +78,11 @@ module.exports = Controller.extend({
     },
 
     onInactive: function(infoFooter) {
-        if (infoFooter.y === -1) {
+        if(infoFooter.y === -1) {
             this.footer.classList.add('out-of-screen');
         }
 
-        if (infoFooter.y === 1) {
+        if(infoFooter.y === 1) {
             this.header.classList.add('out-of-screen');
         }
 
@@ -101,12 +101,12 @@ module.exports = Controller.extend({
 });
 
 function onScroll(viewportBounds, direction) {
-    if (this.contentBoundsFooter.intersects(viewportBounds) || this.contentBoundsHeader.intersects(viewportBounds)) {
+    if(this.contentBoundsFooter.intersects(viewportBounds) || this.contentBoundsHeader.intersects(viewportBounds)) {
         this.headerOutOfViewportInfo = null;
         this.footerOutOfViewportInfo = null;
         this.onActive(getIntersectionInfo(this.contentBoundsFooter, objectDimension, viewportBounds, 'addLocal').clampLocal(-1, 1), getIntersectionInfo(this.contentBoundsHeader, objectDimension, viewportBounds, 'addLocal').clampLocal(-1, 1), direction);
     } else {
-        if (!this.headerOutOfViewportInfo && !this.footerOutOfViewportInfo) {
+        if(!this.headerOutOfViewportInfo && !this.footerOutOfViewportInfo) {
             this.headerOutOfViewportInfo = new Vector();
             this.headerOutOfViewportInfo.reset(getIntersectionInfo(this.contentBoundsHeader, objectDimension, viewportBounds, 'addLocal')).clampLocal(-1, 1);
             this.footerOutOfViewportInfo = new Vector();
@@ -117,9 +117,9 @@ function onScroll(viewportBounds, direction) {
 }
 
 function onMeasure() {
-    element.updateBounds(this.el, this.contentBounds);
-    element.updateBounds(this.header, this.headerBounds);
-    element.updateBounds(this.footer, this.footerBounds);
+    element.updateBounds(this.el, this.contentBounds, viewport);
+    element.updateBounds(this.header, this.headerBounds, viewport);
+    element.updateBounds(this.footer, this.footerBounds, viewport);
 }
 
 function onInit(viewportBounds, direction) {
