@@ -49,10 +49,6 @@
       "config": {
         "template": "agency-pkg-documentation/tmpl/doc-template.hbs"
       }
-    }, {
-      "name": "define-area",
-      "src": "../../env/helpers/define-area",
-      "config": {}
     }],
     "assets": "<%= destination %>/assets/",
     "layouts": {
@@ -82,10 +78,7 @@
         "main": "<%= destination %>/js/app.js",
         "mainDocs": "<%= destination %>/js/appDocs.js",
         "embed": [
-          "<%= destination %>/js/embed/_main.js",
-          "<%= destination %>/js/embed/animationFrame.js",
-          "<%= destination %>/js/embed/agency_pkg_polyfills.js",
-          "<%= destination %>/js/embed/agency_pkg_service_dev_tools.js"
+          "<%= destination %>/js/embed/embed.js"
         ]
       },
       "css": {
@@ -109,7 +102,7 @@
       }
     }, {
       "name": "docs",
-      "layout": "layouts/default",
+      "layout": "agency-pkg-documentation/layout-detail",
       "renderingOnce": false,
       "files": {
         "src": ["./node_modules/agency-pkg-documentation/docs/*.hbs"],
@@ -315,18 +308,10 @@
     }, {
       "name": "embed",
       "entry": {
-        "animationFrame": "agency-pkg-service-animation-frame",
-        "agency_pkg_polyfills": "agency-pkg-polyfills",
-        "agency_pkg_service_dev_tools": "agency-pkg-service-dev-tools"
+        "embed": "./src/js/embed"
       },
       "plugins": [{
         "script": "agency-environment/lib/webpack/plugins/dedupe"
-      }, {
-        "script": "agency-environment/lib/webpack/plugins/chunk",
-        "config": {
-          "main": "_main.js",
-          "packages": ["animationFrame", "agency_pkg_polyfills", "agency_pkg_service_dev_tools"]
-        }
       }, {
         "script": "agency-environment/lib/webpack/plugins/uglify",
         "config": {
@@ -352,7 +337,7 @@
         }
       },
       "files": {
-        "src": ["agency-pkg-polyfills"],
+        "src": ["./src/js/embed"],
         "dest": "<%= destination %>/js/embed/[name].js",
         "library": ["[name]"]
       }
