@@ -159,6 +159,11 @@
       }]
     }
   },
+  "package-build": {
+    "dest": "build",
+    "root": "./build",
+    "dev": false
+  },
   "package-development": {
     "host": "localhost",
     "dest": "dev",
