@@ -27,7 +27,7 @@
     "url": "git+https://github.com/agency-framework/agency-boilerplate.git"
   },
   "scripts": {
-    "heroku": "node node_modules/gulp/bin/gulp run --serverConfig=./env/config/agency/server.json --configTasks=./envconfig/agency/tasks.json --env=production --server=agency-server",
+    "heroku": "node node_modules/gulp/bin/gulp run --serverConfig=./env/config/agency/server.json --configTasks=./envconfig/agency/tasks.json --env=production --server=agency-server --heroku=true",
     "build": "node node_modules/gulp/bin/gulp build --serverConfig=./env/config/agency/server.json --configTasks=./env/config/agency/tasks.json --env=build",
     "export": "node node_modules/gulp/bin/gulp export --serverConfig=./env/config/agency/server.json --configTasks=./env/config/agency/tasks.json --env=export",
     "dev": "node node_modules/gulp/bin/gulp run --serverConfig=./env/config/agency/server.json --configTasks=./env/config/agency/tasks.json --env=development --server=agency-server",
