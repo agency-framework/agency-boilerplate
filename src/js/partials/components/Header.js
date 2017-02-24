@@ -1,15 +1,31 @@
 "use strict";
 
 var ScrollDirectionObserver = require('agency-pkg-base/scroll/DirectionObserver');
-var Velocity = require('velocity-animate');
+var anime = require('animejs');
 
 module.exports = ScrollDirectionObserver.extend({
     outOfViewport: false,
     handler: null,
+    tween: null,
+
+    initialize: function() {
+        ScrollDirectionObserver.prototype.initialize.apply(this, arguments);
+        this.tween = anime({
+            targets: this.el,
+            translateY: {
+                value: '-100%',
+                duration: 350
+            },
+            autoplay: false,
+            direction: 'reverse',
+            easing: 'easeInOutQuad'
+        });
+    },
 
     onInit: function() {
         this.classList = this.el.classList;
         updateClass(this, true);
+        this.tween.pause();
     },
 
     onUp: function() {
@@ -23,26 +39,12 @@ module.exports = ScrollDirectionObserver.extend({
 });
 
 function updateClass(scope, flag) {
-    if(scope.outOfViewport !== flag) {
-        if(flag === true) {
-            Velocity(scope.el, {
-                translateY: '0%'
-            }, {
-                duration: 350
-            });
-        } else {
-            Velocity(scope.el, {
-                translateY: '-100%'
-            }, {
-                duration: 350
-            });
-        }
+    if(scope.outOfViewport !== flag) {        
+        scope.tween.play();
     }
-
     scope.outOfViewport = flag;
 }
 
 function isOutOfViewport(bounds, viewportBounds) {
-    // console.log(viewportBounds.min.y, bounds.max.y, bounds.min.y);
     return (viewportBounds.min.y < bounds.max.y - bounds.min.y);
 }

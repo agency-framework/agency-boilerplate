@@ -1,15 +1,20 @@
 "use strict";
 
 var StateObserver = require('agency-pkg-base/scroll/StateObserver');
-var Velocity = require('velocity-animate');
+var anime = require('animejs');
 
 module.exports = StateObserver.extend({
+    tween: null,
 
     modelConstructor: StateObserver.prototype.modelConstructor.extend({
         session: {
             offset: {
                 type: 'number',
                 default: 0
+            },
+            triggered: {
+                type: 'boolean',
+                default: true
             }
         }
     }),
@@ -19,20 +24,18 @@ module.exports = StateObserver.extend({
 
         var picture = this.el.querySelector('picture');
 
-        Velocity(this.el.querySelector('figcaption'), {
-            translateY: '100%'
-        }, 350);
+        this.tween = anime({
+            targets: this.el.querySelector('figcaption'),
+            translateY: {
+                value: '100%',
+                duration: 350
+            },
+            autoplay: true,
+            direction: 'reverse'
+        });
 
-        this.model.on('change:triggered', function(model, value) {
-            if(value) {
-                Velocity(this.el.querySelector('figcaption'), {
-                    translateY: '0%'
-                }, 350);
-            } else {
-                Velocity(this.el.querySelector('figcaption'), {
-                    translateY: '100%'
-                }, 350);
-            }
+        this.model.on('change:triggered', function() {
+            this.tween.play();
         }.bind(this));
 
         this.pictureStyle = picture.style;
@@ -47,5 +50,6 @@ module.exports = StateObserver.extend({
 
     onInactive: function() {
         StateObserver.prototype.onInactive.apply(this, arguments);
+        // console.log('inactive',info);
     }
 });

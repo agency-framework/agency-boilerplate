@@ -23,11 +23,6 @@
         "module": "agency-server/lib/hapi/route/debug",
         "options": {}
       }, {
-        "module": "agency-server/lib/hapi/route/kewego",
-        "options": {
-          "appKey": "UNSAFE: CHANGE ME"
-        }
-      }, {
         "module": "agency-server/lib/hapi/route/auth/session",
         "options": {
           "appId": "1649448378651481",
@@ -62,13 +57,15 @@
       "plugins": [{
         "script": "agency-environment/lib/webpack/plugins/provide",
         "config": {
-          "$": "jquery",
-          "jQuery": "jquery",
-          "window.jQuery": "jquery",
-          "root.jQuery": "jquery"
+          "$": "jquery/src/core",
+          "jQuery": "jquery/src/core",
+          "window.jQuery": "jquery/src/core",
+          "root.jQuery": "jquery/src/core"
         }
       }, {
         "script": "agency-environment/lib/webpack/plugins/polyfills"
+      }, {
+        "script": "agency-environment/lib/webpack/plugins/dedupe"
       }, {
         "script": "agency-environment/lib/webpack/plugins/hotReplacement"
       }],
@@ -135,11 +132,6 @@
       "routes": [{
         "module": "agency-server/lib/hapi/route/debug",
         "options": {}
-      }, {
-        "module": "agency-server/lib/hapi/route/kewego",
-        "options": {
-          "appKey": "UNSAFE: CHANGE ME"
-        }
       }, {
         "module": "agency-server/lib/hapi/route/auth/session",
         "options": {}
@@ -270,11 +262,6 @@
       "routes": [{
         "module": "agency-server/lib/hapi/route/debug",
         "options": {}
-      }, {
-        "module": "agency-server/lib/hapi/route/kewego",
-        "options": {
-          "appKey": "UNSAFE: CHANGE ME"
-        }
       }, {
         "module": "agency-server/lib/hapi/route/auth/session",
         "options": {}

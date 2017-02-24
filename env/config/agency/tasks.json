@@ -175,7 +175,7 @@
         "params": []
       }, {
         "name": "cssnano",
-        "params": []
+        "params": [{"zindex": false}]
       }],
       "files": {
         "src": ["./src/pcss/style.pcss", "./src/pcss/critical.pcss", "./src/pcss/style.docs.pcss", "./src/pcss/critical.docs.pcss"],
@@ -194,7 +194,9 @@
     "breakpoints": {
       "default": {
         "gutterWidth": "0.9375rem",
-        "wrapper": {}
+        "wrapper": {
+          "overflow": "hidden"
+        }
       },
       "xs": {
         "width": "30rem",
@@ -248,10 +250,10 @@
       "plugins": [{
         "script": "agency-environment/lib/webpack/plugins/provide",
         "config": {
-          "$": "jquery",
-          "jQuery": "jquery",
-          "window.jQuery": "jquery",
-          "root.jQuery": "jquery"
+          "$": "jquery/src/core",
+          "jQuery": "jquery/src/core",
+          "window.jQuery": "jquery/src/core",
+          "root.jQuery": "jquery/src/core"
         }
       }, {
         "script": "agency-environment/lib/webpack/plugins/polyfills"
@@ -261,8 +263,23 @@
         "script": "agency-environment/lib/webpack/plugins/uglify",
         "config": {
           "compress": {
-
+            "drop_console": true
           }
+        }
+      }, {
+        "script": "agency-environment/lib/webpack/plugins/optimize",
+        "config": {
+          "sourceMap": false
+        }
+      }, {
+        "script": "agency-environment/lib/webpack/plugins/analyzer",
+        "config": {
+          "analyzerMode": "static",
+          "openAnalyzer": false,
+          "reportFilename": "../reports/webpack/index.html",
+          "generateStatsFile": true,
+          "statsFilename": "../reports/webpack/stats.json",
+          "logLevel": "info"
         }
       }],
       "module": {
@@ -297,7 +314,13 @@
       },
       "resolve": {
         "alias": {
-          "modernizr$": "<%= root %>/.modernizrrc"
+          "modernizr$": "<%= root %>/.modernizrrc",
+          "TweenMax": "gsap/src/uncompressed/TweenMax.js",
+          "TweenLite" : "gsap/src/uncompressed/TweenLite.js",
+          "TimelineLite" : "gsap/src/uncompressed/TimelineLite.js",
+          "TimelineMax": "gsap/src/uncompressed/TimelineMax.js",
+          "EasePack": "gsap/src/uncompressed/easing/EasePack.js",
+          "CSSPlugin": "gsap/src/uncompressed/plugins/CSSPlugin.js"
         }
       },
       "files": {
@@ -318,6 +341,11 @@
           "compress": {
             "drop_console": false
           }
+        }
+      }, {
+        "script": "agency-environment/lib/webpack/plugins/optimize",
+        "config": {
+          "sourceMap": false
         }
       }],
       "module": {

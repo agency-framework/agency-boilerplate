@@ -1,9 +1,8 @@
 "use strict";
 
-var js = require('agency-pkg-service-parser')(require('./packages.docs'));
+require('jquery/src/event');
+require('jquery/src/event/trigger');
+require('jquery/src/data');
 
-(function(){
-    $(function() {
-        js.parse();
-    });
-})();
+var js = require('agency-pkg-service-parser')(require('./packages.docs'));
+js.parse();
