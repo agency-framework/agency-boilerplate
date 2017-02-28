@@ -36,6 +36,7 @@
     "server": "node node_modules/gulp/bin/gulp default --serverConfig=./env/config/agency/server.json --env=development --server=agency-server",
     "test": "npm run build",
     "template": "yo agency-boilerplate:hbs-template",
+    "package-template": "yo agency-boilerplate:hbs-package-template"
     "create-package": "yo agency-boilerplate:package"
   },
   "dependencies": {
